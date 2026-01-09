@@ -1,9 +1,9 @@
 services:
   - type: pserv
-    name: openapi
+    name: OpenApi
     plan: free
     region: oregon
-    databaseName: openapi_db
+    databaseName: openapi_db_axvl
     user: openapi_user
   - type: web
     name: product-api
@@ -19,13 +19,13 @@ services:
       - key: SECRET_KEY
         generateValue: true
       - key: DB_NAME
-        value: openapi_db
+        value: openapi_db_axvl
       - key: DB_USER
         value: openapi_user
       - key: DB_PASSWORD
         value: ujacrRI7ZWEdKrNvPsU6izyhtvhyrcLP
       - key: DB_HOST
-        value: dpg-d5git1q4d50c73b0s2f0-a.oregon-postgres.render.com
+        value: dpg-d5gjkm4hg0os73bmek5g-a.oregon-postgres.render.com
       - key: DB_PORT
         value: "5432"
     healthCheckPath: /api/products/
