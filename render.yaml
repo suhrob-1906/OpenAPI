@@ -23,15 +23,9 @@ services:
       - key: DB_USER
         value: openapi_user
       - key: DB_PASSWORD
-        fromDatabase:
-          name: openapi
-          property: password
+        value: ujacrRI7ZWEdKrNvPsU6izyhtvhyrcLP
       - key: DB_HOST
-        fromDatabase:
-          name: openapi
-          property: host
+        value: dpg-d5git1q4d50c73b0s2f0-a.oregon-postgres.render.com
       - key: DB_PORT
-        fromDatabase:
-          name: openapi
-          property: port
+        value: "5432"
     healthCheckPath: /api/products/
