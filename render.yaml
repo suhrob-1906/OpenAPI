@@ -1,6 +1,6 @@
 services:
   - type: pserv
-    name: openapi-db
+    name: openapi
     plan: free
     region: oregon
     databaseName: openapi_db
@@ -24,14 +24,14 @@ services:
         value: openapi_user
       - key: DB_PASSWORD
         fromDatabase:
-          name: openapi-db
+          name: openapi
           property: password
       - key: DB_HOST
         fromDatabase:
-          name: openapi-db
+          name: openapi
           property: host
       - key: DB_PORT
         fromDatabase:
-          name: openapi-db
+          name: openapi
           property: port
     healthCheckPath: /api/products/
