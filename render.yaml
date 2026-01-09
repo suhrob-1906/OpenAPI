@@ -1,4 +1,10 @@
 services:
+  - type: pserv
+    name: openapi-db
+    plan: free
+    region: oregon
+    databaseName: openapi_db
+    user: openapi_user
   - type: web
     name: product-api
     env: python
@@ -28,9 +34,4 @@ services:
         fromDatabase:
           name: openapi-db
           property: port
-  - type: pserv
-    name: openapi-db
-    plan: free
-    region: oregon
-    databaseName: openapi_db
-    user: openapi_user
+    healthCheckPath: /api/products/
